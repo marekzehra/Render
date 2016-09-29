@@ -21,7 +21,10 @@ static const unsigned long __nan[2] = {0xffffffff, 0x7fffffff};
 #define NAN (*(const float *)__nan)
 #endif
 
+#ifndef CSS_NAN
 float CSS_NAN() { return NAN; }
+#define CSS_NAN
+#endif
 
 #define CSS_UNDEFINED NAN
 
